@@ -1,2 +1,0 @@
-(this["webpackJsonppreetham-net-react"]=this["webpackJsonppreetham-net-react"]||[]).push([[0],{9:function(e,t,n){"use strict";n.r(t);var r=n(0),c=n.n(r),s=n(3),a=n.n(s),i=n(1),o=function(){return Object(i.jsx)("div",{children:"Hello there!"})};a.a.render(Object(i.jsx)(c.a.StrictMode,{children:Object(i.jsx)(o,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.db2d0836.chunk.js.map
