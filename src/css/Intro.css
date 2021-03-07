@@ -1,0 +1,14 @@
+.avatar-xl {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .avatar-xl {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,27 +1,44 @@
-import { Card } from "react-bootstrap";
+import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import classNames from "classnames";
 
+import "./../css/IconCard.css";
+
 const IconCard = props => {
+  const renderTooltip = settings => {
+    return (
+      <Tooltip id="button-tooltip" {...settings} className="warning">
+        {props.tooltipText}
+      </Tooltip>
+    );
+  };
+
   function takeToLink(e) {
-    console.log("props: ", props);
     if (props.link) {
-      window.location.href = props.link;
+      window.open(props.link, "_blank");
     }
   }
 
   return (
-    <Card
-      className={classNames({
-        "bg-transparent": true,
-        "border-primary": true,
-        "ml-1": true,
-        "mr-1": true,
-        link: props.link ? true : false,
-      })}
-      onClick={takeToLink}
+    <OverlayTrigger
+      placement="bottom"
+      delay={{ show: 250, hide: 400 }}
+      overlay={renderTooltip}
     >
-      <Card.Header>{props.icon}</Card.Header>
-    </Card>
+      <Card
+        className={classNames({
+          "bg-transparent": true,
+          "sm-ml-1": true,
+          "sm-mr-1": true,
+          link: props.link ? true : false,
+          "mt-1": true,
+          "mb-1": true,
+          "border-on-hover-1": true,
+        })}
+        onMouseDown={takeToLink}
+      >
+        <Card.Header>{props.icon}</Card.Header>
+      </Card>
+    </OverlayTrigger>
   );
 };
 

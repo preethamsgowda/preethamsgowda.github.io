@@ -1,0 +1,51 @@
+:root {
+  --backgroundColor: rgba(48, 98, 216, 1);
+  --borderColor: rgba(48, 98, 216);
+  --textColor: rgb(100, 255, 218);
+}
+
+.tooltip-inner {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-size: 0.8em;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--borderColor);
+  padding: 10px;
+  margin: 10px 0 0 0;
+  filter: drop-shadow(rgba(0, 0, 0, 0.4) 0 2px 3px);
+}
+
+.arrow {
+  display: none !important;
+}
+
+.tooltip-inner::before,
+.tooltip-inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.tooltip-inner::after {
+  right: calc(50% - 7px);
+  border-color: transparent transparent var(--backgroundColor) transparent;
+  border-width: 7px;
+}
+
+.tooltip-inner::before {
+  right: calc(50% - 10px);
+  border-color: transparent transparent var(--borderColor) transparent;
+  border-width: 10px;
+}
+
+.link {
+  cursor: pointer;
+}
