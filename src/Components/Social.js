@@ -17,6 +17,7 @@ const Social = () => {
           link={linkLinkedIn}
           tooltipText="My LinkedIn Profile."
         />
+        /
         <IconCard
           icon={<FontAwesomeIcon icon={faGitSquare} className="h1" />}
           link={linkGitHub}
